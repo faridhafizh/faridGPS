@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Scraper</title>
+  <style>
+    body { width: 320px; font-family: sans-serif; padding: 12px; }
+    label { display: block; margin-top: 8px; font-weight: bold; }
+    textarea { width: 100%; box-sizing: border-box; }
+    button { margin-top: 8px; }
+    #status { margin-top: 8px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h3>Web Scraper</h3>
+  <label>Field selectors (JSON)</label>
+  <textarea id="selectors" rows="6" placeholder='{"title":"h1","content":"article"}'></textarea>
+  <label>Next link selector</label>
+  <input id="next" style="width:100%" placeholder="a[rel=next]" />
+  <label>Format</label>
+  <select id="format">
+    <option value="json">JSON</option>
+    <option value="csv">CSV</option>
+  </select>
+  <button id="autodetect">Auto-detect</button>
+  <button id="save">Save config</button>
+  <button id="scrape">Scrape active tab</button>
+  <div id="status"></div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
